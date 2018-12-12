@@ -1,12 +1,13 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native'
 import React from 'react'
+
+import ExpenseList from '../../components/ExpenseList/ExpenseList.container'
 
 
 const HomeScreen = () => (
   <View>
-    <Text>Hello</Text>
+    <ExpenseList />
   </View>
 )
-
 
 export default HomeScreen
