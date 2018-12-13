@@ -1,23 +1,50 @@
 import React from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, StyleSheet} from 'react-native'
 
-import Colors from '../../constants/Colors'
+import DateIcon from '../DateIcon/DateIcon'
+import Typography from '../Typography/Typography'
+
 import {normalize} from '../../helpers/normalize'
+import Colors from '../../constants/Colors'
 
 
 const ExpenseItem = ({expense}) => (
-  <View style={styles.root}>
-    <Text>Hello</Text>
+  <View
+    style={expense.amount >= 0
+      ? {...styles.rootStyles, ...styles.rootPositive}
+      : {...styles.rootStyles, ...styles.rootNegative}}
+  >
+    <DateIcon date='18' />
+    <View>
+      <Typography>{expense.time.format()}</Typography>
+      <Typography>{expense.description}</Typography>
+    </View>
+    <Typography>{expense.amount}</Typography>
   </View>
 )
-
+ 
 const styles = StyleSheet.create({
-  root: {
-    backgroundColor: Colors.grey,
+  rootStyles: {
+    alignItems: 'center',
     borderRadius: normalize(3),
+    flexDirection: 'row',
     height: normalize(50),
-    marginLeft: '1%',
-    width: '98%',
+    justifyContent: 'space-between',
+    marginTop: normalize(7),
+    marginLeft: '2%',
+    shadowColor: Colors.shadowGreyLight,
+    shadowOpacity: 1,
+    shadowRadius: 10,
+    shadowOffset: {
+      height: normalize(5),
+    },
+    width: '96%',
+  },
+  rootPositive: {
+    backgroundColor: Colors.softGreen,
+  },
+  rootNegative: {
+    backgroundColor: Colors.softRed,
   },
 })
 

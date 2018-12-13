@@ -10,6 +10,8 @@
     "lint-fix": "eslint ./src --fix"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "classnames": "^2.2.6",
     "eslint_d": "^7.0.0",
     "expo": "^31.0.2",
     "lodash": "^4.17.11",
@@ -17,6 +19,7 @@
     "pre-commit": "^1.2.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-elements": "^0.19.1",
     "react-navigation": "^3.0.8",
     "react-redux": "^6.0.0",
     "recompose": "^0.30.0",

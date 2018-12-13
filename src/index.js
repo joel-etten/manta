@@ -14,11 +14,15 @@ export default class App extends React.Component {
 
   _loadResourcesAsync = async () => Promise.all([
     Asset.loadAsync([
-      
+      /* eslint-disable global-require */
+      require('./assets/images/icons/baseline-add-24px.png'),
     ]),
 
     Font.loadAsync({
-
+      /* eslint-disable */ 
+        'OpenSans': require('./assets/fonts/OpenSans-Regular.ttf'),
+        'OpenSans-medium': require('./assets/fonts/OpenSans-SemiBold.ttf'),
+      /* eslint-enable */
     }),
   ]);
 

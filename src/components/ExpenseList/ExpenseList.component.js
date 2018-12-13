@@ -1,5 +1,5 @@
 import React from 'react'
-import {View} from 'react-native'
+import {ScrollView} from 'react-native'
 
 import YearSectionList from './YearSectionList/YearSectionList'
 
@@ -15,9 +15,9 @@ class ExpenseList extends React.Component {
     const {expenses} = this.props
 
     return (
-      <View>
+      <ScrollView>
         <YearSectionList expenses={expenses} />
-      </View>
+      </ScrollView>
     )
   }
   
