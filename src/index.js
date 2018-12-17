@@ -20,8 +20,13 @@ export default class App extends React.Component {
 
     Font.loadAsync({
       /* eslint-disable */ 
-        'OpenSans': require('./assets/fonts/OpenSans-Regular.ttf'),
-        'OpenSans-medium': require('./assets/fonts/OpenSans-SemiBold.ttf'),
+        'Heebo': require('./assets/fonts/Heebo-Regular.ttf'),
+        'Heebo-Black': require('./assets/fonts/Heebo-Black.ttf'),
+        'Heebo-Bold': require('./assets/fonts/Heebo-Bold.ttf'),
+        'Heebo-ExtraBold': require('./assets/fonts/Heebo-ExtraBold.ttf'),
+        'Heebo-Light': require('./assets/fonts/Heebo-Light.ttf'),
+        'Heebo-Medium': require('./assets/fonts/Heebo-Medium.ttf'),
+        'Heebo-Thin': require('./assets/fonts/Heebo-Thin.ttf'),
       /* eslint-enable */
     }),
   ]);

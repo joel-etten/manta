@@ -15,7 +15,7 @@ const AddButton = ({onPress}) => (
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    backgroundColor: Colors.lightGrey,
+    backgroundColor: Colors.lightBlue,
     height: normalize(40),
     justifyContent: 'center',
     marginTop: normalize(20),

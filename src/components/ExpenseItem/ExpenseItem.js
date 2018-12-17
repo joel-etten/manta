@@ -10,25 +10,30 @@ import Colors from '../../constants/Colors'
 
 const ExpenseItem = ({expense}) => (
   <View
-    style={expense.amount >= 0
-      ? {...styles.rootStyles, ...styles.rootPositive}
-      : {...styles.rootStyles, ...styles.rootNegative}}
+    style={styles.rootStyles}
   >
     <DateIcon date='18' />
     <View>
       <Typography>{expense.time.format()}</Typography>
       <Typography>{expense.description}</Typography>
     </View>
-    <Typography>{expense.amount}</Typography>
+    <Typography
+      style={expense.amount >= 0
+        ? styles.amountPositive
+        : styles.amountNegative
+      }
+    >{expense.amount}€
+    </Typography>
   </View>
 )
  
 const styles = StyleSheet.create({
   rootStyles: {
     alignItems: 'center',
+    backgroundColor: Colors.white,
     borderRadius: normalize(3),
     flexDirection: 'row',
-    height: normalize(50),
+    height: normalize(60),
     justifyContent: 'space-between',
     marginTop: normalize(7),
     marginLeft: '2%',
@@ -40,11 +45,11 @@ const styles = StyleSheet.create({
     },
     width: '96%',
   },
-  rootPositive: {
-    backgroundColor: Colors.softGreen,
+  amountPositive: {
+    color: Colors.green,
   },
-  rootNegative: {
-    backgroundColor: Colors.softRed,
+  amountNegative: {
+    color: Colors.red,
   },
 })
 

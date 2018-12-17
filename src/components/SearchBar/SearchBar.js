@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     fontSize: normalize(20),
     height: normalize(35),
     margin: 'auto',
+    marginTop: normalize(20),
     marginLeft: '7,5%',
     justifyContent: 'center',
     paddingLeft: normalize(15),

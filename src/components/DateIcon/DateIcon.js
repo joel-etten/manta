@@ -9,14 +9,14 @@ import Colors from '../../constants/Colors'
 
 const DateIcon = ({date}) => (
   <View style={styles.root}>
-    <Typography>{date}</Typography>
+    <Typography style={styles.text}>{date}</Typography>
   </View>
 )
 
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
-    backgroundColor: Colors.grey,
+    backgroundColor: Colors.lightBlue,
     borderRadius: normalize(15),
     height: normalize(30),
     justifyContent: 'center',
@@ -27,6 +27,9 @@ const styles = StyleSheet.create({
       height: normalize(5),
     },
     width: normalize(30),
+  },
+  text: {
+    color: Colors.blue,
   },
 })
 

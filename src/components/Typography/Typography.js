@@ -19,7 +19,7 @@ Typography.defaultProps = {
 
 const styles = {
   root: {
-    fontFamily: 'OpenSans',
+    fontFamily: 'Heebo',
   },
 }
 
